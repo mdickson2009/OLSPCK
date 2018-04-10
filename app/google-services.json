@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1014085526122",
+    "firebase_url": "https://olspck-aa477.firebaseio.com",
+    "project_id": "olspck-aa477",
+    "storage_bucket": "olspck-aa477.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014085526122:android:2dbb9b5615e01b45",
+        "android_client_info": {
+          "package_name": "uuproject.olspck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014085526122-gv0gqcehjjvfsd3uah11tjh0ruclicpm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6yPKRmOOmEUwr67gpQv3T0KZSrigiT_4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
