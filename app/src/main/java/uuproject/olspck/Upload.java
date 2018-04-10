@@ -51,7 +51,7 @@ public class Upload extends AppCompatActivity {
         });
     }
 
-    //
+    //Create Path for Image folder
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
