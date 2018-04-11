@@ -22,8 +22,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     private DatabaseReference databaseReference;
 
-    private EditText editTextName, editTextAddress;
-    private Button buttonSaveInfo;
+
 
 
 
@@ -40,9 +39,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             FirebaseUser user = firebaseAuth.getCurrentUser();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextAddress = (EditText) findViewById(R.id.editTextAddress);
-        buttonSaveInfo = (Button) findViewById(R.id.buttonSaveInfo);
+
 
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
         textViewUserEmail.setText("Welcome "+user.getEmail());
@@ -50,23 +47,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
 
         buttonLogout.setOnClickListener(this);
-        buttonSaveInfo.setOnClickListener(this);
     }
 
-    private void saveUserInfo(){
-        String name = editTextName.getText().toString().trim();
-        String address = editTextAddress.getText().toString().trim();
 
-        UserInfo userInfo = new UserInfo(name,address);
-
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-
-        databaseReference.child(user.getUid()).setValue(userInfo);
-
-        Toast.makeText(this, "Information has been saved", Toast.LENGTH_SHORT).show();
-
-
-    }
 
     @Override
     public void onClick(View view) {
@@ -76,9 +59,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(this, Login.class));
         }
 
-        if(view == buttonSaveInfo){
-            saveUserInfo();
         }
 
     }
-}
+
