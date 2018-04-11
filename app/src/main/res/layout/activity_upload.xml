@@ -4,31 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Upload">
+    tools:context=".Upload"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/uploadimage"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
-        android:layout_height="57dp"
-        android:layout_marginBottom="319dp"
-        android:text="Upload Image"
+        android:layout_height="36dp"
+        android:layout_marginBottom="47dp"
+        android:text="Upload Content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/editText1" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="400dp"
-        android:layout_height="174dp"
-        android:layout_marginBottom="76dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="148dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Add Text Here"
         app:layout_constraintBottom_toTopOf="@+id/uploadimage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 </android.support.constraint.ConstraintLayout>
