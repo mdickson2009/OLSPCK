@@ -8,37 +8,35 @@
     tools:layout_editor_absoluteY="81dp">
 
     <Button
-        android:id="@+id/uploadimage"
+        android:id="@+id/btnUpload_Click"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginBottom="47dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="16dp"
         android:text="Upload Content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+        app:layout_constraintTop_toBottomOf="@+id/TextInfo1" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewA"
         android:layout_width="0dp"
-        android:layout_height="148dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="147dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginEnd="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="9dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText1"
+        app:layout_constraintBottom_toTopOf="@+id/btnBrowse_Click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/TextInfo1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="19dp"
         android:layout_marginEnd="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
@@ -46,9 +44,20 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Add Text Here"
-        app:layout_constraintBottom_toTopOf="@+id/uploadimage"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpload_Click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBrowse_Click" />
+
+    <Button
+        android:id="@+id/btnBrowse_Click"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginBottom="7dp"
+        android:text="Browse Image"
+        app:layout_constraintBottom_toTopOf="@+id/TextInfo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewA" />
 
 </android.support.constraint.ConstraintLayout>
