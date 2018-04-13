@@ -44,7 +44,7 @@ public class DashBoard extends AppCompatActivity implements View.OnClickListener
             case R.id.registerId: i = new Intent(this, MainActivity.class); startActivity(i);break;
             case R.id.downloadId: i = new Intent(this, Download.class); startActivity(i);break;
             case R.id.homeId:     i = new Intent(this, Home.class); startActivity(i);break;
-            case R.id.uploadId: i = new Intent(this, Upload.class); startActivity(i);break;
+            case R.id.uploadId: i = new Intent(this, UploadContent.class); startActivity(i);break;
             case R.id.departmentid: i = new Intent(this, Department.class); startActivity(i);break;
             case R.id.logoutId: i = new Intent(this, ProfileActivity.class); startActivity(i);break;
             default:break;
