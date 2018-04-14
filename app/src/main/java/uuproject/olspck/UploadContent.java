@@ -29,7 +29,6 @@ public class UploadContent extends AppCompatActivity {
     private EditText mDesc;
     private Button mupload;
     private static final int GALLERY_REQUEST = 1;
-    private Object startPosting;
     private Uri mImageUri = null;
     private StorageReference mStorage;
     private DatabaseReference mDataRef;
