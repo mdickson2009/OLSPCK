@@ -1,9 +1,10 @@
 package uuproject.olspck;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 
-import android.provider.ContactsContract;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,7 +15,6 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -33,6 +33,7 @@ public class UploadContent extends AppCompatActivity {
     private Uri mImageUri = null;
     private StorageReference mStorage;
     private DatabaseReference mDataRef;
+    private ProgressDialog mProgress;
 
 
 
@@ -52,6 +53,8 @@ public class UploadContent extends AppCompatActivity {
         mDesc = findViewById(R.id.textDesc);
 
         mupload = findViewById(R.id.uploadButton);
+
+        mProgress = new ProgressDialog(this);
 
 
         mImageButton.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +91,9 @@ public class UploadContent extends AppCompatActivity {
 
         if (!TextUtils.isEmpty(title_value) && !TextUtils.isEmpty(desc_value) && mImageUri !=null){
 
+            mProgress.setMessage("Uploading...");
+            mProgress.show();
+
             StorageReference filepath = mStorage.child("Images").child(mImageUri.getLastPathSegment());
 
             filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -95,10 +101,11 @@ public class UploadContent extends AppCompatActivity {
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                     Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                    mProgress.dismiss();
 
                     DatabaseReference newPost = mDataRef.push();
 
-                    newPost.child("Ttile").setValue(title_value);
+                    newPost.child("Title").setValue(title_value);
                     newPost.child("desc").setValue(desc_value);
                     newPost.child("image").setValue(downloadUrl.toString());
 

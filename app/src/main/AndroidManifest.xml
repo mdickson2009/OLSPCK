@@ -20,8 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Base.Theme.AppCompat"/>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
         <activity android:name=".DashBoard" />
         <activity android:name=".Login" />
         <activity android:name=".ProfileActivity" />
@@ -30,8 +31,8 @@
         <activity android:name=".Department" />
         <activity android:name=".Download" />
         <activity android:name=".Home" />
-        <activity android:name=".UploadContent">
-        </activity>
+        <activity android:name=".UploadContent"></activity>
+        <activity android:name=".SinglePost"></activity>
     </application>
 
 </manifest>
